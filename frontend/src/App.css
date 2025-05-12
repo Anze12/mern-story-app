@@ -1,0 +1,277 @@
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #fce4ec, #f8bbd0); /* Softer pink */
+  margin: 0;
+  padding: 0;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: #ec407a; /* Muted rose pink */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.navbar h1 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.navbar button {
+  background-color: #fff;
+  color: #ec407a;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-left: 0.5rem;
+}
+
+.navbar button:hover {
+  background-color: #f8bbd0;
+  transform: scale(1.05);
+}
+
+/* Form Styles */
+.story-form, .auth-form {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  margin: 1rem;
+  transition: all 0.3s ease;
+}
+
+.story-form:hover, .auth-form:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.story-form h2, .auth-form h2 {
+  color: #ec407a;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+/* Input Fields Styling */
+input, textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid #f0f0f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #ec407a;
+  box-shadow: 0 0 8px rgba(236, 64, 122, 0.3);
+}
+
+/* General Button Styling */
+button {
+  background-color: #ec407a;
+  color: white;
+  padding: 0.9rem 1.4rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  margin: 0.3rem;
+}
+
+button:hover {
+  background-color: #d81b60;
+  transform: scale(1.05);
+}
+
+/* Paragraph Styling */
+p {
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+}
+
+p a {
+  text-decoration: none;
+  color: #ec407a;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+p a:hover {
+  color: #d81b60;
+}
+
+/* Story Card Styles */
+.story-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.story-card h3 {
+  font-size: 1.5rem;
+  color: #ec407a;
+  margin-bottom: 0.8rem;
+}
+
+.story-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+/* Button Variants */
+.favorite-btn,
+.edit-btn,
+.delete-btn {
+  display: inline-block;
+  margin: 0.2rem 0.3rem;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.favorite-btn {
+  background-color: #ec407a;
+  color: white;
+}
+
+.favorite-btn:hover {
+  background-color: #d81b60;
+}
+
+.edit-btn {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #388e3c;
+}
+
+.delete-btn {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Search Bar Styling */
+.search-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+  max-width: 500px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.search-bar button {
+  background-color: #5c6bc0; /* Indigo */
+  color: white;
+}
+
+.search-bar button:hover {
+  background-color: #3f51b5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .story-form, .auth-form {
+    padding: 1.5rem;
+    max-width: 400px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .navbar h1 {
+    font-size: 1.8rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  input, textarea {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-form, .auth-form {
+    padding: 1rem;
+    max-width: 350px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .navbar h1 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  input, textarea {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
