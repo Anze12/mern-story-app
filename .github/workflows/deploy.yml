@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set Docker to Minikube
-        run: eval $(minikube docker-env)
+        run: minikube -p minikube dcoker-env | Invoke-Expression
 
       - name: Build Docker images
         run: |
